@@ -2301,6 +2301,10 @@ a.btn {
   .stats-grid > div:nth-child(4)::before {
     display: none;
   }
+
+  .promoBanner_content {
+	  margin: 0;
+	}
   .promoBanner_img {
 	  max-height: 500px;
 	  max-width: 300px;
