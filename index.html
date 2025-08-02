@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Learning Online</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+
+	<!-- Rojo Promoción -->
+	<div class="promo-bar">
+	  <div class="promo-container">
+	    <button class="promo-close" onclick="cerrarPromo()">×</button>
+		<div class="promo-content">
+		  <span class="promo-text">⚠️ 👉 <b>3 meses gratis</b> en membresías de 3 meses.</span>
+		  <button class="promo-btn" id="boton-compra">¡Compra aquí!</button>
+		</div>	
+	  </div>
+	</div>
+	
+	<a href="#precios" class="sticky-subscribe-btn">
+	  Comienza ya
+	</a>
+	<!-- Azul NAV BAR -->
+	<nav class="navbar">
+	  <div class="navbar-container">
+		<div class="logo">
+		  <img src="assets/images/logo-qlo.png" alt="Quick Learning Online" />
+		</div>
+
+		<div class="menu-toggle" id="menu-toggle">
+			  <a href="alumnos.html" class="btn secondary small">Acceso alumnos</a>
+		  <i class="fas fa-bars"></i>
+		</div>
+
+		<ul class="nav-links">
+		  <li><a href="#" id="nav-metodo">Método</a></li>
+		   <li><a href="#" id="nav-caracteristicas">Características</a></li>
+		  <li><a href="#" id="nav-precios">Precios</a></li>
+		</ul>
+
+		<div class="nav-buttons">
+		  <a href="alumnos.html" class="btn secondary small">Acceso alumnos</a>
+		  <button class="btn primary small" id="nav-comienza">Comienza ya <img src="assets/icons/arrow1.png" alt="Flecha" class="arrow-icon"/></button>
+		</div>
+	  </div>
+	</nav>
+	<!-- Principal -->
+	<header class="hero">
+		<div class="hero-content">
+		  <div class="hero-text">
+			<h1>Aprende Inglés<br/>en línea.</h1>
+			<p>Domina el inglés desde casa con <strong>QUICK LEARNING Online,</strong> la plataforma con cursos de inglés en línea que te enseña a hablar inglés desde el primer día, fácil y rápido.</p>
+			<div class="hero-buttons">
+				<button class="btn primary" id="hero-comienza">Comienza ya <img src="assets/icons/arrow1.png" alt="flecha" class="arrow-icon">
+				</button>
+				 <button class="btn secondary" id="ver-demo">Ver Demo</button>
+			</div>
+		  </div>
+		  <div class="hero-image">
+			  <div id="hero-animation">
+				<img id="frame" src="assets/images/secuencia/Vid_00000.png" alt="Animación Quick Learning" />
+			  </div>
+		  </div>
+		</div>
+	 </header>
+	<!-- Metodo -->
+	<section class="metodo" id="metodo">
+	  <div class="metodo-container">
+		<h2 class="degradado-texto" style="siz">¿Cómo funciona el método<br> QUICK LEARNING?</h2>
+		<p class="metodo-sub">Nuestros cursos en línea te ofrecen la experiencia de aprender inglés en cuatro sencillos pasos. ¡Habla inglés como aprendiste a hablar español!</p>
+
+		<div class="pasos animar">
+		  <div class="paso">
+			<div class="icono"><img src="assets/icons/audio.png" alt="Escucha" /></div>
+			<h3>1. Escucha</h3>
+			<p>Conversaciones reales y aprende el inglés tal como se habla naturalmente. Sin reglas gramaticales complicadas.</p>
+		  </div>
+		  <div class="paso">
+			<div class="icono"><img src="assets/icons/light.png" alt="Comprende" /></div>
+			<h3>2. Comprende</h3>
+			<p>Aprende el vocabulario y las estructuras con videos y ejercicios interactivos fáciles y divertidos.</p>
+		  </div>
+		  <div class="paso">
+			<div class="icono"><img src="assets/icons/talk.png" alt="Habla" /></div>
+			<h3>3. Habla</h3>
+			<p>Mejora tu fluidez desde el primer día practicando tu pronunciación con la herramienta de reconocimiento de voz.</p>
+		  </div>
+		  <div class="paso">
+			<div class="icono"><img src="assets/icons/check.png" alt="Perfecciona" /></div>
+			<h3>4. Perfecciona</h3>
+			<p>Practica de forma ilimitada con maestros de QUICK LEARNING totalmente en vivo y perfecciona tu conversación.</p>
+		  </div>
+		</div>
+		  
+		<div class="slider-metodo-movil">
+
+		  <div class="tarjeta-paso animar" id="paso-movil">
+			<div class="icono-esquina" id="icono-movil">
+			  <img src="assets/icons/audio.png" alt="Escucha" />
+			</div>
+			<h3 id="titulo-movil">Escucha</h3>
+			<p id="texto-movil">
+			  Conversaciones reales y aprende el inglés tal como se habla naturalmente. Sin reglas gramaticales complicadas.
+			</p>
+		  </div>
+		</div>
+
+
+			
+		<div class="botones-beneficio">
+		  <button class="arrow left" id="prev">
+			<img src="assets/icons/arrowc3.png" alt="Flecha izquierda" />
+		  </button>
+			
+		  <button class="arrow right" id="next">
+			<img src="assets/icons/arrowc4.png" alt="Flecha derecha"/>
+		  </button>
+		</div>
+			
+		</div>
+	</section>
+	<!-- Videos -->
+	<section class="hero-section" id="caracteristicas">
+	  <h2>Conoce cómo con <strong>QUICK LEARNING</strong></h2><h2 style="margin-top: -10px">Online ¡hablas o hablas!</h2>
+	  <p class="sub">Explora nuestra plataforma para aprender inglés diseñada con un enfoque 100% conversacional.</p>
+
+	  <div class="feature-box animar">
+		<div class="video-placeholder">
+		  <video autoplay muted playsinline loop class="responsive-video">
+			<source src="assets/videos/Online02.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	    <div class="text-content">
+		<h3>¡Es como ver una serie!</h3>
+		<p>
+		  Sumérgete en diálogos reales inspirados en situaciones cotidianas: presentarte,
+		  ordenar en un restaurante, hacer una videollamada… ¡lo que realmente necesitas
+		  para comunicarte en inglés! Es como ver una serie, con personajes que hablan de forma
+		  natural, clara y práctica.
+		</p>
+		<div class="buttons">
+		<button class="btn primary small btn-comenzar">
+		  Comenzar <img src="assets/icons/arrow1.png" class="arrow-icon"/>
+		</button>
+		  <button class="btn secondary small btn-info">+ info</button>
+		</div>
+	  </div>
+	  <img src="assets/images/destello.png" alt="Destello" class="destelloTop" />
+	  <img src="assets/images/destello.png" alt="Destello" class="destello-bottom" />
+	</div>
+		
+	  <!-- derecha -->
+	  <div class="feature-box reverse animar">
+	  	<div class="video-placeholder">
+		  <video autoplay muted playsinline loop class="responsive-video">
+			<source src="assets/videos/Online03.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  <div class="text-content">
+		<h3>Haz que tu inglés se escuche increíble</h3>
+		<p>Perfecciona tu inglés con la Tabla Fonética de Colores de QUICK LEARNING, una herramienta única y revolucionaria que te ayuda a articular correctamente los sonidos del idioma y tener una pronunciación perfecta en tiempo récord.</p>
+		<div class="buttons">
+		  <button class="btn primary small btn-comenzar">Comenzar <img src="assets/icons/arrow1.png" class="arrow-icon"/></button>
+		  <button class="btn secondary small btn-info">+ info</button>
+		</div>
+	  </div>
+		<img class="character-side right animar-personaje" src="assets/images/personaje-busqueda2.png" alt="Personaje" />
+		<img src="assets/images/destello.png" alt="Destello" class="destelloTop2" />
+		<img src="assets/images/destello.png" alt="Destello vertical" class="destello-left" />
+	</div>
+	  <!-- izquierda-->
+	  <div class="feature-box animar">
+	  	<div class="video-placeholder">
+		  <video autoplay muted playsinline loop class="responsive-video">
+			<source src="assets/videos/Online04.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  <div class="text-content">
+		<h3>¡Habla y habla sin parar!</h3>
+		<p>Practica vocabulario y conversaciones con nuestra tecnología de reconocimiento de voz. Recibe retroalimentación instantánea sobre tu pronunciación y mejora tu fluidez como si tuvieras un coach personal, disponible 24/7.</p>
+		<div class="buttons">
+		  <button class="btn primary small btn-comenzar">Comenzar <img src="assets/icons/arrow1.png" class="arrow-icon"/></button>
+		  <button class="btn secondary small btn-info">+ info</button>
+		</div>
+	  </div>
+	  <img class="character-side left animar-personaje" src="assets/images/personaje-busqueda3.png" alt="Personaje" />
+		<img src="assets/images/destello.png" alt="Destello" class="destelloTop3" />
+		<img src="assets/images/destello.png" alt="Destello" class="destello-bottom" />
+	</div>
+	  <!-- derecha -->
+	  <div class="feature-box reverse animar">
+	  	<div class="video-placeholder">
+		  <video autoplay muted playsinline loop class="responsive-video">
+			<source src="assets/videos/Online05.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  <div class="text-content">
+		<h3>Practica con maestros en vivo.</h3>
+		<p>Únete a sesiones en vivo para seguir practicando y mejorando tu inglés con maestros de QUICK LEARNING y compañeros de tu mismo nivel, ¡de todo el mundo!</p>
+		<div class="buttons">
+		<button class="btn primary small btn-comenzar">
+		  Comenzar <img src="assets/icons/arrow1.png" class="arrow-icon"/>
+		</button>
+		  <button class="btn secondary small btn-info">+ info</button>
+		</div>
+	  </div>
+		<img class="character-side right animar-personaje" src="assets/images/personaje-busqueda4.png" alt="Personaje"/>
+		<img src="assets/images/destello.png" alt="Destello" class="destello-bottom2" />
+		<img src="assets/images/destello.png" alt="Destello vertical derecho" class="destello-right"/>
+	</div>
+	  <!-- izquierda-->
+	  <div class="feature-box animar">
+	  	<div class="video-placeholder">
+		  <video autoplay muted playsinline loop class="responsive-video">
+			<source src="assets/videos/Online06.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  <div class="text-content">
+		<h3>Monitorea tu progreso y gana confianza</h3>
+		<p>Dale seguimiento a tu avance día a día y descubre qué áreas necesitas mejorar: pronunciación, estructura o fluidez. Con cada paso, verás tu progreso en tiempo real y ganarás la confianza necesaria para alcanzar tus metas.</p>
+		<div class="buttons">
+		<button class="btn primary small btn-comenzar">
+		  Comenzar <img src="assets/icons/arrow1.png" class="arrow-icon"/>
+		</button>
+		  <button class="btn secondary small btn-info">+ info</button>
+		</div>
+	  </div>
+		<img class="character-side left animar-personaje" src="assets/images/personaje-busqueda5.png" alt="Personaje" style="transform: scaleX(1);" />
+		<img src="assets/images/destello.png" alt="Destello" class="destelloTop3" />
+		<img src="assets/images/destello.png" alt="Destello" class="destello-bottom" />
+	</div>
+	  <img src="assets/images/ele4.png" class="bg-element ele1" alt="">
+	  <img src="assets/images/ele2.png" class="bg-element ele2" alt="">
+	  <img src="assets/images/ele3.png" class="bg-element ele3" alt="">
+	  <img src="assets/images/ele1.png" class="bg-element ele4" alt="">
+	</section>
+	<!-- Beneficios -->
+	<section class="benefits-section">
+	  <h2 class="degradado-texto">
+		¿Por qué elegir <span>QUICK LEARNING Online</span>?
+	  </h2>
+	  <p class="metodo-sub">
+		Nuestros cursos de inglés en línea tienen ventajas únicas que garantizan que vas a aprender y a hablar desde tu primera clase.
+	  </p>
+
+	  <div class="benefit-row">
+		<div class="benefit-card animar">
+		  <div class="icon-circle">
+			<img src="assets/icons/ico1.png" alt="Certificado" />
+		  </div>
+		  <h3>100% en línea</h3>
+		  <p>Inglés práctico, flexible y efectivo. 100% en línea para que estudies donde y cuando quieras.</p>
+		</div>
+		<div class="benefit-card animar">
+		  <div class="icon-circle">
+			<img src="assets/icons/ico2.png" alt="Testimonios" />
+		  </div>
+		  <h3>Enfócate en hablar</h3>
+		  <p>Método único que prioriza la conversación desde el primer día, sin memorizar reglas.</p>
+		</div>
+		<div class="benefit-card animar">
+		  <div class="icon-circle">
+			<img src="assets/icons/ico3.png" alt="Garantía" />
+		  </div>
+		  <h3>Maestros en vivo</h3>
+		  <p>Un monitor inteligente que mide tu progreso y te ayuda a mantener la motivación y ganar confianza.</p>
+		</div>
+	  </div>
+	  <div class="benefit-row">
+		<div class="benefit-card animar">
+		  <div class="icon-circle">
+			<img src="assets/icons/ico4.png" alt="Ritmo propio" />
+		  </div>
+		  <h3>Aprende a tu ritmo</h3>
+		  <p>Nuestra plataforma está disponible para ti las 24 horas, los 7 días de la semana, para que aprendas a tu propio ritmo.</p>
+		</div>
+		<div class="benefit-card animar">
+		  <div class="icon-circle">
+			<img src="assets/icons/ico5.png" alt="Resultados reales" />
+		  </div>
+		  <h3>Resultados reales</h3>
+		  <p>Metodología 100% conversacional que garantiza resultados visibles desde la primera semana.</p>
+		</div>
+		<div class="benefit-card animar">
+		  <div class="icon-circle">
+			<img src="assets/icons/ico6.png" alt="Seguimiento personalizado" />
+		  </div>
+		  <h3>Seguimiento personalizado</h3>
+		  <p>Un monitor inteligente que mide tu progreso y te ayuda a mantener la motivación y ganar confianza.</p>
+		</div>
+	  </div>
+	  <div class="slider-benefits-movil">
+	    <div class="tarjeta-beneficio animar" id="beneficio-movil">
+		  <div class="icono-esquina-beneficio" id="icono-beneficio">
+		  <img src="assets/icons/ico1.png" alt="100% en línea" />
+		</div>
+		  <h3 id="titulo-beneficio">100% en línea</h3>
+		  <p id="texto-beneficio">Inglés práctico, flexible y efectivo. 100% en línea para que estudies donde y cuando quieras.</p>
+	   </div>
+
+       <div class="botones-beneficio">
+    <button class="arrow left" id="prev-benefit">
+      <img src="assets/icons/arrowc3.png" alt="Flecha izquierda" />
+    </button>
+    <button class="arrow right" id="next-benefit">
+      <img src="assets/icons/arrowc4.png" alt="Flecha derecha" />
+    </button>
+  </div>
+      </div>
+	</section>
+	<!-- Testimoniales -->
+	<section class="stats-section">
+	  <h2>Únete a miles de personas que ya hablan inglés</h2>
+
+	  <p>Resultados reales, de personas reales.</p>
+
+	  <div class="stats-grid">
+		<div>
+		  <strong>1M+</strong>
+		  <span>Alumnos</span>
+		</div>
+		<div>
+		  <strong>1K+</strong>
+		  <span>Empresas</span>
+		</div>
+		<div>
+		  <strong>98%</strong>
+		  <span>Satisfacción</span>
+		</div>
+		<div>
+		  <strong>600+</strong>
+		  <span>Happy Teachers</span>
+		</div>
+	  </div>
+
+	<div class="testimonial-row responsive-slider">
+		<button class="arrow left" id="prev-testimonial">&#10094;</button>
+		
+		<div class="testimonial-carousel">
+		  <div class="testimonial-card animar">
+			<div class="face-stars-row">
+				<img class="testimonial-face" src="assets/faces/01.png" alt="Brian" />
+				<img class="stars-img" src="assets/icons/stars.png" alt="5 stars"/>
+			</div>
+			<p>Las clases online son súper dinámicas. ¡No te aburres y sí aprendes!</h4>
+			<span>CEO & Founder</span>
+			<img src="assets/images/destello.png" alt="Destello decorativo" class="destello-bottom3"/>
+			<img src="assets/images/destello.png" alt="Destello decorativo" class="destelloTop4"/>
+		  </div>
+		  <div class="testimonial-card animar">
+			<div class="face-stars-row">
+				<img class="testimonial-face" src="assets/faces/02.png" alt="Brian" />
+				<img class="stars-img" src="assets/icons/stars.png" alt="5 stars"/>
+			</div>
+			<p>Excelente método. Me ayudó mucho con mi inglés para el trabajo.</p>
+			<h4>Stephanie Powell</h4>
+			<span>VP of Finance</span>
+			<img src="assets/images/destello.png" alt="Destello decorativo" class="destello-bottom4"/>
+			<img src="assets/images/destello.png" alt="Destello decorativo" class="destelloTop5"/>
+		  </div>
+		  <div class="testimonial-card animar">
+			<div class="face-stars-row">
+				<img class="testimonial-face" src="assets/faces/03.png" alt="Brian" />
+				<img class="stars-img" src="assets/icons/stars.png" alt="5 stars" />
+			</div>
+			<p>Ideal si trabajas o estudias. Aprendo en mis tiempos libres.</p>
+			<h4>Christopher White</h4>
+			<span>VP of Product</span>
+			<img src="assets/images/destello.png" alt="Destello decorativo" class="destello-bottom3"/>
+			<img src="assets/images/destello.png" alt="Destello decorativo" class="destelloTop4"/>
+		  </div>
+		  <div class="testimonial-card animar">
+			<div class="face-stars-row">
+				<img class="testimonial-face" src="assets/faces/04.png" alt="Brian" />
+				<img class="stars-img" src="assets/icons/stars.png" alt="5 stars" />
+			</div>
+			<p>Me gusta que todo esté en línea y pueda repetir los temas cuando quiera.</p>
+			<h4>Emily Smith</h4>
+			<span>CEO</span>
+			<img src="assets/images/destello.png" alt="Destello decorativo" class="destello-bottom4"/>
+			<img src="assets/images/destello.png" alt="Destello decorativo" class="destelloTop5"/>
+		  </div>
+	    </div>
+		<button class="arrow right" id="next-testimonial">&#10095;</button>
+	</div>
+
+	</section>
+	<!-- Precios -->
+	<section class="membership-section" id="precios">
+	  <h2 class="degradado-texto">Elige el plan perfecto para ti</h2>
+	  <p class="metodo-sub" style="margin-bottom: 60px;">Inscríbete ahora y comienza a ver resultados desde la primera clase.</p>
+
+	  <div class="membership-cards">
+		<div class="card animar-precio">
+		  <h3>Membresía</h3>
+		  <div class="img-hover-wrapper">
+		    <img src="assets/images/uno.png" alt="Normal" class="img-normal" />
+		    <img src="assets/images/unob.png" alt="Hover" class="img-hover" />
+		  </div>
+
+		  <p class="mes-descripcion">1 mes de acceso a la plataforma</p>
+		  <div class="img-hover-wrapper">
+		    <img src="assets/images/precio1.png" class="img-normal" />
+		    <img src="assets/images/precio1b.png" class="img-hover" />
+		  </div>
+		  <ul>
+			<li>Plataforma disponible 24/7</li>
+			<li>Sesiones ilimitadas en vivo</li>
+		  </ul>
+		  <div class="boton-con-destello">
+			<button class="btn-inscribete">¡Inscríbete!</button>
+			<img src="assets/images/destello.png" alt="Brillo inferior" class="destello-bottom2"/>
+		  </div>
+		</div>
+
+		<div class="card animar-precio activo">
+		  <img src="assets/images/banda.png" alt="Promoción" class="banda-promocion" />
+		  <h3>Membresía</h3>
+		  <div class="img-hover-wrapper">
+		    <img src="assets/images/tres.png" alt="Normal" class="img-normal" />
+		    <img src="assets/images/tresb.png" alt="Hover" class="img-hover" />
+		  </div>
+		  <p class="mes-descripcion">3 meses de acceso a la plataforma</p>
+		  <div class="img-hover-wrapper">
+		    <img src="assets/images/precio3.png" class="img-normal" />
+		    <img src="assets/images/precio3b.png" class="img-hover" />
+		  </div>
+		  <ul>
+			<li>Plataforma disponible 24/7</li>
+			<li>Sesiones ilimitadas en vivo</li>
+			<li>1 mes adicional <strong>GRATIS</strong></li>
+			<li>Meses sin intereses</li>
+		  </ul>
+		  <div class="boton-con-destello">
+			<button class="btn-inscribete">¡Inscríbete!</button>
+			<img src="assets/images/destello.png" alt="Brillo inferior" class="destello-bottom2"/>
+		  </div>
+		</div>
+
+		<div class="card animar-precio">
+		  <h3>Membresía</h3>
+		  <div class="img-hover-wrapper">
+		    <img src="assets/images/seis.png" alt="Normal"   class="img-normal" />
+		    <img src="assets/images/seisb.png" alt="Hover" class="img-hover" />
+		  </div>
+		  <p class="mes-descripcion">6 meses de acceso a la plataforma</p>
+		  <div class="img-hover-wrapper">
+		    <img src="assets/images/precio6.png" class="img-normal" />
+		    <img src="assets/images/precio6b.png" class="img-hover" />
+		  </div>
+		  <ul>
+			<li>Plataforma disponible 24/7</li>
+			<li>Sesiones ilimitadas en vivo</li>
+			<li>1 mes adicional <strong>GRATIS</strong></li>
+			<li>Meses sin intereses</li>
+		  </ul>
+		  <div class="boton-con-destello">
+			<button class="btn-inscribete">¡Inscríbete!</button>
+			<img src="assets/images/destello.png" alt="Brillo inferior" class="destello-bottom2"/>
+		  </div>
+		</div>
+
+		<div class="card animar-precio">
+		  <h3>Membresía</h3>
+		  <div class="img-hover-wrapper">
+			  <img src="assets/images/doce.png" alt="Normal" class="img-normal"/>
+			  <img src="assets/images/doceb.png" alt="Hover" class="img-hover"/>
+			</div>	  <p class="mes-descripcion">12 meses de acceso a la plataforma</p>
+			<div class="img-hover-wrapper">
+			  <img src="assets/images/precio12.png" class="img-normal"/>
+			  <img src="assets/images/precio12b.png" class="img-hover"/>
+			</div>
+		  <ul>
+			<li>Plataforma disponible 24/7</li>
+			<li>Sesiones ilimitadas en vivo</li>
+			<li>1 mes adicional <strong>GRATIS</strong></li>
+			<li>Meses sin intereses</li>
+		  </ul>
+		  <div class="boton-con-destello">
+			<button class="btn-inscribete">¡Inscríbete!</button>
+			<img src="assets/images/destello.png" alt="Brillo inferior" class="destello-bottom2"/>
+		  </div>
+		</div>
+	  </div>
+	</section>
+
+	<section class="seccion-hero">
+	  <div class="contenido-hero">
+		<h2>¡No lo pienses más! Habla inglés desde hoy con <span>Quick Learning Online</span></h2>
+		<p>Miles de personas ya están hablando inglés con confianza.
+		Es tu turno de unirte a ellos y transformar tu futuro.</p>
+			<div class="buttons">
+			  <button class="btn primary small btn-inscribete">
+				Comenzar <img src="assets/icons/arrow1.png" alt="Flecha" class="arrow-icon" />
+			  </button>
+			  <button class="btn secondary small btn-info">+ info</button>
+			</div>
+	  </div>
+	</section>
+
+	<footer class="footer-ql">
+	  <div class="footer-top">
+		<div class="footer-col logo">
+		  <img src="assets/images/logo-footer.png" alt="Quick Learning Logo" />
+		  <p>Inglés en QUICK LEARNING,<br>¡hablas o hablas!</p>
+		</div>
+		<div class="footer-col">
+		  <strong>Soporte</strong>
+		  <p><a href="mailto:soporte@quicklearning.com">soporte@quicklearning.com</a></p>
+		</div>
+		<div class="footer-col">
+		  <strong>¿Necesitas ayuda?</strong>
+		  <p><i class="fas fa-phone-alt"></i> 01 80 02 77 70 77</p>
+		  <p><i class="fab fa-whatsapp"></i> 56 41 86 41 50</p>
+		</div>
+	  </div>
+	  <hr />
+	  <div class="footer-bottom">
+		<p>
+		  Copyright© 2025. Quick Learning | Derechos Reservados |
+		  <a href="#">Términos y Condiciones</a> |
+		  <a href="#">Aviso de Privacidad</a>
+		</p>
+	  </div>
+	</footer>
+	
+	<a href="https://api.whatsapp.com/send/?phone=5215641864150&text=Hola%2C+me+encantar%C3%ADa+recibir+informaci%C3%B3n+de+sus+cursos.&type=phone_number&app_absent=0" 
+	   class="whatsapp-float" 
+	   target="_blank" 
+	   aria-label="WhatsApp">
+	  <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
+	</a>
+	
+	<!-- POPUP VIDEO -->
+	<div class="popup-overlay" id="popup-demo">
+	  <div class="popup-content">
+		<button class="popup-close" id="cerrar-demo">×</button>
+		<video class="popup-video" src="assets/videos/Online.mp4" controls></video>
+	  </div>
+	</div>
+	<!-- Popup Promocional -->
+	<div id="promoBanner_overlay" class="promoBanner_overlay">
+	  <div class="promoBanner_content">
+		<picture>
+		  <!-- Versión para móviles -->
+		  <source srcset="assets/images/Banner_Vertical.png" media="(max-width: 600px)">
+		  <!-- Versión para pantallas grandes -->
+		  <img src="assets/images/Banner.jpg" alt="Promoción Quick Learning" class="promoBanner_img" />
+		</picture>
+		<button class="promoBanner_close" id="promoBanner_closeBtn">&times;</button>
+	  </div>
+	</div>
+	
+	<script>
+	  const promoBanner = document.getElementById("promoBanner_overlay");
+	  const promoBannerClose = document.getElementById("promoBanner_closeBtn");
+
+	  // Mostrar con clase iluminada
+	  document.body.classList.add("banner-activo");
+
+	  promoBannerClose.addEventListener("click", () => {
+		promoBanner.style.display = "none";
+		document.body.classList.remove("banner-activo");
+	  });
+
+	  promoBanner.addEventListener("click", (e) => {
+		if (e.target === promoBanner) {
+		  promoBanner.style.display = "none";
+		  document.body.classList.remove("banner-activo");
+		}
+	  });
+	</script>
+	<script>
+		document.addEventListener("scroll", () => {
+		  const section = document.querySelector(".hero-section");
+		  const sectionTop = section.offsetTop;
+		  const sectionHeight = section.offsetHeight;
+		  const scrollY = window.scrollY;
+
+		  // solo cuando estás en esa sección
+		  if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
+			const scrollInSection = scrollY - sectionTop;
+			const elements = document.querySelectorAll(".bg-element");
+
+			elements.forEach((el, index) => {
+			  // movimiento sutil hacia arriba o abajo
+			  const movement = scrollInSection * (0.02 + index * 0.005);
+			  el.style.transform = `translateY(${movement}px)`;
+			});
+		  }
+		});
+	</script>
+	<script>
+	  let frameIndex = 0;
+	  const totalFrames = 277;
+	  const fps = 30;
+	  const img = document.getElementById("frame");
+
+	  function playAnimation() {
+		frameIndex = (frameIndex + 1) % totalFrames;
+		const padded = String(frameIndex).padStart(5, "0");
+		img.src = `assets/images/secuencia/Vid_${padded}.png`;
+	  }
+
+	  setInterval(playAnimation, 1000 / fps);
+	</script>
+	<script>
+	  function cerrarPromo() {
+		const barra = document.querySelector('.promo-bar');
+		if (barra) {
+		  barra.classList.add('oculta');
+		  setTimeout(() => {
+			barra.style.display = 'none';
+		  }, 400);
+		}
+	  }
+
+	  const promoBar = document.querySelector('.promo-bar');
+	  const closeBtn = document.querySelector('.promo-close');
+	  const navbar = document.querySelector('.navbar');
+
+	  function ajustarPosiciones() {
+		const promoHeight = promoBar.classList.contains('oculta') ? 0 : promoBar.offsetHeight;
+		navbar.style.top = `${promoHeight}px`;
+		document.body.style.paddingTop = `${promoHeight + navbar.offsetHeight}px`;
+	  }
+
+	  // Al cargar
+	  window.addEventListener('DOMContentLoaded', ajustarPosiciones);
+	  // Al redimensionar
+	  window.addEventListener('resize', ajustarPosiciones);
+	  // Al cerrar la promo
+	  closeBtn.addEventListener('click', () => {
+		promoBar.classList.add('oculta');
+		ajustarPosiciones();
+	  });
+	
+      const toggle = document.getElementById('menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const navButtons = document.querySelector('.nav-buttons');
+
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        navButtons.classList.toggle('show');
+      });
+
+	  // Cerrar menú al hacer clic en un enlace del menú
+	  document.querySelectorAll('.nav-links a').forEach(link => {
+		link.addEventListener('click', () => {
+		  navLinks.classList.remove('show');
+		  navButtons.classList.remove('show');
+		});
+	  });
+
+	  // Cerrar menú al hacer clic fuera
+	  document.addEventListener('click', (event) => {
+		const isClickInsideMenu = navLinks.contains(event.target) || navButtons.contains(event.target) || menuToggle.contains(event.target);
+		if (!isClickInsideMenu) {
+		  navLinks.classList.remove('show');
+		  navButtons.classList.remove('show');
+		}
+	  });
+		
+		document.getElementById('boton-compra')?.addEventListener('click', function () {
+		  const target = document.getElementById('precios');
+		  if (target) {
+			target.scrollIntoView({ behavior: 'smooth' });
+		  }
+		});
+		
+		document.getElementById('nav-metodo')?.addEventListener('click', function (e) {
+		  e.preventDefault();
+		  const target = document.getElementById('metodo');
+		  if (target) {
+			target.scrollIntoView({ behavior: 'smooth' });
+		  }
+		});
+		document.getElementById('nav-caracteristicas')?.addEventListener('click', function (e) {
+		  e.preventDefault();
+		  const target = document.getElementById('caracteristicas');
+		  if (target) {
+			target.scrollIntoView({ behavior: 'smooth' });
+		  }
+		});
+		document.getElementById('nav-precios')?.addEventListener('click', function (e) {
+		  e.preventDefault();
+		  const target = document.getElementById('precios');
+		  if (target) {
+			target.scrollIntoView({ behavior: 'smooth' });
+		  }
+		});
+		// Botón Comienza Ya
+		document.getElementById('nav-comienza')?.addEventListener('click', function (e) {
+		  e.preventDefault();
+		  document.getElementById('precios')?.scrollIntoView({ behavior: 'smooth' });
+		  cerrarMenu();
+		});
+		
+		document.getElementById('hero-comienza')?.addEventListener('click', function () {
+		  const target = document.getElementById('precios');
+		  if (target) {
+			target.scrollIntoView({ behavior: 'smooth' });
+		  }
+		});
+		// Botones "Comenzar" → Scroll a #precios
+		document.querySelectorAll('.btn-comenzar').forEach(btn => {
+		  btn.addEventListener('click', function () {
+			const target = document.getElementById('precios');
+			if (target) {
+			  target.scrollIntoView({ behavior: 'smooth' });
+			}
+		  });
+		});
+
+		// Botones "+ info" → WhatsApp
+		const whatsappURL = "https://api.whatsapp.com/send/?phone=5215641864150&text=Hola%2C+me+encantar%C3%ADa+recibir+informaci%C3%B3n+de+sus+cursos.&type=phone_number&app_absent=0";
+
+		document.querySelectorAll('.btn-info').forEach(btn => {
+		  btn.addEventListener('click', function () {
+			window.open(whatsappURL, '_blank');
+		  });
+		});
+		function cerrarMenu() {
+		  const navLinks = document.querySelector('.nav-links');
+		  const navButtons = document.querySelector('.nav-buttons');
+		  const toggle = document.getElementById('menu-toggle');
+
+		  navLinks.classList.remove('show');
+		  navButtons.classList.remove('show');
+		  toggle.classList.remove('active');
+		  document.body.classList.remove('menu-open'); // solo si usas esto
+		}
+
+		
+		
+</script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const verDemoBtn = document.getElementById('ver-demo');
+  const popup = document.getElementById('popup-demo');
+  const cerrarBtn = document.getElementById('cerrar-demo');
+  const video = popup.querySelector('.popup-video');
+
+  if (!verDemoBtn || !popup || !cerrarBtn || !video) {
+    console.warn("Elementos del popup no encontrados.");
+    return;
+  }
+
+  // Abrir popup y reproducir video
+  verDemoBtn.addEventListener('click', () => {
+    popup.style.display = 'flex';
+    video.currentTime = 0;
+    video.play();
+  });
+
+  // Función para cerrar el popup y detener video
+  function cerrarPopup() {
+    popup.style.display = 'none';
+    video.pause();
+    video.currentTime = 0; // reiniciar para evitar que se escuche
+  }
+
+  // Botón de cerrar
+  cerrarBtn.addEventListener('click', cerrarPopup);
+
+  // Clic fuera del video
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) cerrarPopup();
+  });
+});
+
+</script>
+	<script>
+	  const beneficios = [
+		{
+		  titulo: "100% en línea",
+		  texto: "Inglés práctico, flexible y efectivo. 100% en línea para que estudies donde y cuando quieras.",
+		  icono: "assets/icons/ico1.png",
+		  alt: "100% en línea"
+		},
+		{
+		  titulo: "Enfócate en hablar",
+		  texto: "Método único que prioriza la conversación desde el primer día, sin memorizar reglas.",
+		  icono: "assets/icons/ico2.png",
+		  alt: "Enfócate en hablar"
+		},
+		{
+		  titulo: "Maestros en vivo",
+		  texto: "Un monitor inteligente que mide tu progreso y te ayuda a mantener la motivación y ganar confianza.",
+		  icono: "assets/icons/ico3.png",
+		  alt: "Maestros en vivo"
+		},
+		{
+		  titulo: "Aprende a tu ritmo",
+		  texto: "Nuestra plataforma está disponible para ti las 24 horas, los 7 días de la semana, para que aprendas a tu propio ritmo.",
+		  icono: "assets/icons/ico4.png",
+		  alt: "Aprende a tu ritmo"
+		},
+		{
+		  titulo: "Resultados reales",
+		  texto: "Metodología 100% conversacional que garantiza resultados visibles desde la primera semana.",
+		  icono: "assets/icons/ico5.png",
+		  alt: "Resultados reales"
+		},
+		{
+		  titulo: "Seguimiento personalizado",
+		  texto: "Un monitor inteligente que mide tu progreso y te ayuda a mantener la motivación y ganar confianza.",
+		  icono: "assets/icons/ico6.png",
+		  alt: "Seguimiento personalizado"
+		}
+	  ];
+
+	  let beneficioActual = 0;
+
+	  function actualizarBeneficio() {
+		const beneficio = beneficios[beneficioActual];
+		document.getElementById("titulo-beneficio").textContent = beneficio.titulo;
+		document.getElementById("texto-beneficio").textContent = beneficio.texto;
+		const icono = document.querySelector("#icono-beneficio img");
+		icono.src = beneficio.icono;
+		icono.alt = beneficio.alt;
+	  }
+
+	  document.getElementById("prev-benefit").addEventListener("click", () => {
+		beneficioActual = (beneficioActual - 1 + beneficios.length) % beneficios.length;
+		actualizarBeneficio();
+	  });
+
+	  document.getElementById("next-benefit").addEventListener("click", () => {
+		beneficioActual = (beneficioActual + 1) % beneficios.length;
+		actualizarBeneficio();
+	  });
+
+	  // Cargar el primero
+	  actualizarBeneficio();
+</script>
+  	<script>  
+	const pasos = [
+		{
+		  titulo: "Escucha",
+		  texto: "Conversaciones reales y aprende el inglés tal como se habla naturalmente. Sin reglas gramaticales complicadas.",
+		  icono: "assets/icons/audio.png",
+		  alt: "Escucha"
+		},
+		{
+		  titulo: "Comprende",
+		  texto: "Aprende el vocabulario y las estructuras con videos y ejercicios interactivos fáciles y divertidos.",
+		  icono: "assets/icons/light.png",
+		  alt: "Comprende"
+		},
+		{
+		  titulo: "Habla",
+		  texto: "Mejora tu fluidez desde el primer día practicando tu pronunciación con la herramienta de reconocimiento de voz.",
+		  icono: "assets/icons/talk.png",
+		  alt: "Habla"
+		},
+		{
+		  titulo: "Perfecciona",
+		  texto: "Practica de forma ilimitada con maestros de QUICK LEARNING totalmente en vivo y perfecciona tu conversación.",
+		  icono: "assets/icons/check.png",
+		  alt: "Perfecciona"
+		}
+	  ];
+
+	  let pasoActual = 0;
+
+	  function actualizarPaso() {
+		const paso = pasos[pasoActual];
+		document.getElementById("titulo-movil").textContent = paso.titulo;
+		document.getElementById("texto-movil").textContent = paso.texto;
+		const icono = document.querySelector("#icono-movil img");
+		icono.src = paso.icono;
+		icono.alt = paso.alt;
+	  }
+
+		document.addEventListener("DOMContentLoaded", () => {
+		  const btnPrev = document.getElementById("prev");
+		  const btnNext = document.getElementById("next");
+
+		  if (btnPrev && btnNext) {
+			btnPrev.addEventListener("click", () => {
+			  pasoActual = (pasoActual - 1 + pasos.length) % pasos.length;
+			  actualizarPaso();
+			});
+
+			btnNext.addEventListener("click", () => {
+			  pasoActual = (pasoActual + 1) % pasos.length;
+			  actualizarPaso();
+			});
+
+			actualizarPaso();
+		  }
+		});
+		document.querySelectorAll('.btn-inscribete').forEach(boton => {
+		  boton.addEventListener('click', function () {
+			window.location.href = 'formulario.html';
+		  });
+		});
+		
+		
+let currentIndex = 0;
+
+const carousel = document.querySelector('.testimonial-carousel');
+const cards = document.querySelectorAll('.testimonial-card');
+const prevBtn = document.getElementById('prev-testimonial');
+const nextBtn = document.getElementById('next-testimonial');
+
+function updateCarousel() {
+  const offset = -currentIndex * 100;
+  carousel.style.transform = `translateX(${offset}%)`;
+}
+
+nextBtn?.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateCarousel();
+});
+
+prevBtn?.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateCarousel();
+});
+
+  // Beneficios aniamcion
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add("animado");
+      } else {
+        entrada.target.classList.remove("animado");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll(".animar").forEach((el) => observador.observe(el));
+		
+	  // Animar Personaje	
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animado");
+      } else {
+        entry.target.classList.remove("animado");
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll(".animar, .animar-personaje").forEach(el => observer.observe(el));
+	// Animar Precio		
+  const precios = document.querySelectorAll(".animar-precio");
+
+  const observerPrecios = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        const delay = entrada.target.dataset.delay || "0s";
+        entrada.target.style.animationDelay = delay;
+        entrada.target.classList.add("animado");
+      } else {
+        entrada.target.classList.remove("animado");
+      }
+    });
+  }, { threshold: 0.8 });
+
+  precios.forEach(card => observerPrecios.observe(card));
+	</script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
