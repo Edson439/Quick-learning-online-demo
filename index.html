@@ -325,28 +325,31 @@
 	  <p>Resultados reales, de personas reales.</p>
 
 	  <div class="stats-grid">
-		<div>
-		  <strong>1M+</strong>
-		  <span>Alumnos</span>
-		</div>
-		<div>
-		  <strong>1K+</strong>
-		  <span>Empresas</span>
-		</div>
-		<div>
-		  <strong>98%</strong>
-		  <span>Satisfacción</span>
-		</div>
-		<div>
-		  <strong>600+</strong>
-		  <span>Happy Teachers</span>
-		</div>
+		  
+  <div>
+    <strong class="stat" data-target="1000000" data-suffix="+">500000</strong>
+    <span>Alumnos</span>
+  </div>
+  <div>
+    <strong class="stat" data-target="1000" data-suffix="+">0</strong>
+    <span>Empresas</span>
+  </div>
+  <div>
+    <strong class="stat" data-target="98" data-suffix="%">0</strong>
+    <span>Satisfacción</span>
+  </div>
+  <div>
+    <strong class="stat" data-target="600" data-suffix="+">0</strong>
+    <span>Happy Teachers</span>
+  </div>
+		  
 	  </div>
 
 	<div class="testimonial-row responsive-slider">
 		<button class="arrow left" id="prev-testimonial">&#10094;</button>
 		
-		<div class="testimonial-carousel">
+		<div class="testimonial-carousel-wrapper">
+		  <div class="testimonial-carousel">
 		  <div class="testimonial-card animar">
 			<div class="face-stars-row">
 				<img class="testimonial-face" src="assets/faces/01.png" alt="Brian" />
@@ -391,10 +394,12 @@
 			<img src="assets/images/destello.png" alt="Destello decorativo" class="destelloTop5"/>
 		  </div>
 	    </div>
+		</div>
 		<button class="arrow right" id="next-testimonial">&#10095;</button>
 	</div>
 
 	</section>
+
 	<!-- Precios -->
 	<section class="membership-section" id="precios">
 	  <h2 class="degradado-texto">Elige el plan perfecto para ti</h2>
@@ -561,6 +566,65 @@
 	  </div>
 	</div>
 	
+	
+	
+<script>
+(function () {
+  function formatNumber(num) {
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1).replace(/\.0$/, '') + "M";
+    } else if (num >= 1000) {
+      return (num / 1000).toFixed(1).replace(/\.0$/, '') + "K";
+    }
+    return num;
+  }
+
+  function animateElement(el, endValue, duration, suffix, startValue, stepOverride) {
+    let start = startValue || 0;
+    const totalSteps = duration / 60;
+    const increment = stepOverride || (endValue - start) / totalSteps;
+
+    const update = () => {
+      start += increment;
+      if (start >= endValue) {
+        el.textContent = formatNumber(endValue) + suffix;
+        el.dataset.animating = "false";
+      } else {
+        el.textContent = formatNumber(Math.floor(start)) + suffix;
+        requestAnimationFrame(update);
+      }
+    };
+
+    if (el.dataset.animating !== "true") {
+      el.dataset.animating = "true";
+      requestAnimationFrame(update);
+    }
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const endValue = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || "";
+        const startValue = parseInt(el.dataset.start || "0");
+        const stepOverride = parseInt(el.dataset.step || "0") || undefined;
+        animateElement(el, endValue, 3500, suffix, startValue, stepOverride);
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.stat').forEach(el => {
+      el.dataset.animating = "false";
+      observer.observe(el);
+    });
+  });
+})();
+</script>
+
 	<script>
 	  const promoBanner = document.getElementById("promoBanner_overlay");
 	  const promoBannerClose = document.getElementById("promoBanner_closeBtn");
@@ -976,6 +1040,7 @@ prevBtn?.addEventListener('click', () => {
 
   precios.forEach(card => observerPrecios.observe(card));
 	</script>
+	
   <script src="scripts/script.js"></script>
 </body>
 </html>
