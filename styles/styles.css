@@ -2229,7 +2229,12 @@ a.btn {
   right: 10%;
   width: 300px;
 }
-
+	.stats-grid strong {
+	  font-size: 30px;
+	}
+	.stats-grid span {
+	  font-size: 16px;
+	}
 }
 
 @media (max-width: 667px) {	  
@@ -2354,12 +2359,7 @@ a.btn {
 		  width: 100%;
 	  padding: 0 60px;
 	}
-	.stats-grid strong {
-	  font-size: 30px;
-	}
-	.stats-grid span {
-	  font-size: 16px;
-	}
+
 }
 
 @media (max-width: 600px) {
@@ -2435,5 +2435,4 @@ a.btn {
   .testimonial-card:hover {
 	  transform: translateY(0px);
 	}
-
 }
